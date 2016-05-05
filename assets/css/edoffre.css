@@ -1,0 +1,160 @@
+.button {
+    min-width: 150px;
+    margin: 2em 1em 1em 1em;
+    padding: 1em 2em;
+    border: none;
+    background: none;
+    color: inherit;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+.button--size-s {
+    font-size: 14px;
+}
+
+.button--text-upper {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.button--border-thick {
+    border: 3px solid;
+}
+.button--wayra {
+    overflow: hidden;
+    -webkit-transition: border-color 0.3s, color 0.3s;
+    transition: border-color 0.3s, color 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.bg-1 .button {
+    color: #37474f;
+    border-color: #37474f;
+}
+.button--wayra::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background: #37474f;
+    z-index: -1;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.button--wayra:hover {
+    color: #fff;
+    border-color: #3f51b5;
+}
+.button--wayra:hover::before {
+    opacity: 1;
+    background-color: #3f51b5;
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.modal-backdrop {
+    position: fixed!important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99998!important;
+    background-color: #000;
+}
+.modal {
+    position: fixed!important;
+    top: 15%!important;
+    right: 0;
+    left: 0;
+    z-index: 99999!important;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+}
+.modal-header {
+    border:0!important;
+    background: aliceblue!important;
+    position: relative;
+}
+.modal-title {
+    text-align: center!important;
+    text-transform: inherit!important;
+}
+.modal-footer {
+   border:0!important;
+    background-color: aliceblue;
+    text-align: center!important;
+}
+.modal-body input
+{
+    color: #111!important;
+}
+.image_offre_type{
+    position: absolute;
+    top: -30px;
+    left: 15px;
+    width: 90px;
+    height: 91px;
+    background-position: top center;
+    background-size: 100% 100%;
+
+}
+#submit_offre {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 15px 60px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #3f54cb;
+    color: #fff;
+    box-shadow: 0 6px #2325ab;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border-radius: 0 0 5px 5px;
+    display: block;
+    width: 190px;
+    margin: 0 auto;
+}
+.display_message{
+    padding: 8px 0;
+    margin: 8px 0;
+    display: none;
+    color: #fff;
+    font-size:16px;
+    text-align: center;
+}
+.display_message.success{
+    background-color: rgba(17, 122, 101, 0.37);
+    border: 1px solid #117a65;
+}
+.error_input {
+    border:1px solid red!important;
+
+}
+.error_input::-webkit-input-placeholder {
+    color: red!important;
+}
